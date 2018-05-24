@@ -5,7 +5,8 @@ This program can be used to serve the purpose of a high-quality object tracker. 
 It uses OpenCV's cascade detection technique to detect the object. Then, the detected rectangle is sent to Dlib for further tracking.
  
 # Compile     
-g++ -std=c++11 -O3 -I.. $DLIB_ROOT/dlib/all/source.cpp -lpthread -lX11 -ljpeg -DDLIB_JPEG_SUPPORT object-tracking.cpp -o object-tracker `pkg-config --cflags --libs opencv`
+g++ -std=c++11 -O3 -I.. $DLIB_ROOT/dlib/all/source.cpp -lpthread -lX11 -ljpeg -DDLIB_JPEG_SUPPORT object-tracking.cpp -o object-tracker \`pkg-config --cflags --libs opencv\`    
+(where, $DLIB_ROOT is the root directory where DLIB is installed)    
 
 # Usage     
 ./object-track CASCADE_PATH VID_PATH/CAM_INDEX 
